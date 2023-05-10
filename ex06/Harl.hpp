@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 15:46:47 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/10 16:10:40 by thibaultgir      ###   ########.fr       */
+/*   Created: 2023/05/10 14:33:05 by thibaultgir       #+#    #+#             */
+/*   Updated: 2023/05/10 15:51:43 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HARL_HPP
+# define HARL_HPP
+
 #include <iostream>
-#include "Harl.hpp"
 
-int main(void)
-{
-	Harl harl;
+class Harl {
+	private:
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+	public:
+		Harl( void );
+		~Harl( void );
+		void	complain( std::string level);
+};
 
-	harl.complain("DEBUG");
-	harl.complain("INFO");
-	harl.complain("WARNING");
-	harl.complain("ERROR");
-	harl.complain("NOTEXIST");
-	return (0);
-}
+#endif
