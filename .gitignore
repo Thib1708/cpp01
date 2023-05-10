@@ -1,5 +1,7 @@
-zombie
+*/zombie
 brain
 horde
 weapon
-.replace
+*.replace
+sed
+harl

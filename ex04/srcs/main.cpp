@@ -6,7 +6,7 @@
 /*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 13:24:20 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/10 14:17:26 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/05/10 14:27:34 by thibaultgir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int main (int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout << "Wroung amount of argument" << std::endl;
+		std::cout << "Wrong amount of argument" << std::endl;
+		std::cout << "Usage: <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
 	std::fstream infile;

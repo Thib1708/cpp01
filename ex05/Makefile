@@ -6,20 +6,21 @@
 #    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/10 13:42:09 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/05/10 15:53:08 by thibaultgir      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # VARIABLE
 
-NAME			=	seb
+NAME			=	harl
 
-LIST_HHHH		=	main.cpp		\
+LIST_SRCS		=	main.cpp		\
+					Harl.cpp
 
 # DIRECTORY
 DIR_OBJS		=	.objs/
 
-DIR_HHHH		=	srcs/
+DIR_SRCS		=	./
 
 # CONSTANT
 
@@ -33,9 +34,9 @@ MAKEFLAGS		+=	--no-print-directory
 
 CC 				=	c++
 
-OBJS 			=	$(patsubst %.c, $(DIR_OBJS)%.o, $(HHHH))
+OBJS 			=	$(patsubst %.c, $(DIR_OBJS)%.o, $(SRCS))
 
-HHHH			=	${addprefix ${DIR_HHHH}, ${LIST_HHHH}}
+SRCS			=	${addprefix ${DIR_SRCS}, ${LIST_SRCS}}
 
 INCLUDES		=	${addprefix ${DIR_INCS}, ${HEADERS}}
 
@@ -77,4 +78,3 @@ ${DIR_OBJS}		:
 				mkdir -p ${DIR_OBJS}
 
 .PHONY		: all clean fclean re
-

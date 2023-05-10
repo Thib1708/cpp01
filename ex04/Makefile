@@ -6,13 +6,13 @@
 #    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/10 13:42:09 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/05/10 15:55:53 by thibaultgir      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # VARIABLE
 
-NAME			=	seb
+NAME			=	sed
 
 LIST_SRCS		=	main.cpp		\
 
