@@ -6,7 +6,7 @@
 #    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/10 13:17:09 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/05/24 11:06:23 by thibaultgir      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ MAKEFLAGS		+=	--no-print-directory
 
 CC 				=	c++
 
-OBJS 			=	$(patsubst %.c, $(DIR_OBJS)%.o, $(SRCS))
+OBJS 			=	$(patsubst %.cpp, $(DIR_OBJS)%.o, $(SRCS))
 
 SRCS			=	${addprefix ${DIR_SRCS}, ${LIST_SRCS}}
 
