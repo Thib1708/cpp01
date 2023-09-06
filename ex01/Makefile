@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+         #
+#    By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/05/24 11:06:06 by thibaultgir      ###   ########.fr        #
+#    Updated: 2023/08/31 09:47:32 by tgiraudo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,14 @@ NAME			=	horde
 LIST_SRCS		=	main.cpp		\
 					zombieHorde.cpp	\
 					Zombie.cpp
+
+LIST_INCS		=	Zombie.hpp
 # DIRECTORY
 DIR_OBJS		=	.objs/
 
-DIR_SRCS		=	./
+DIR_SRCS		=	srcs/
+
+DIR_INCS		=	include/
 
 # CONSTANT
 
@@ -38,7 +42,7 @@ OBJS 			=	$(patsubst %.cpp, $(DIR_OBJS)%.o, $(SRCS))
 
 SRCS			=	${addprefix ${DIR_SRCS}, ${LIST_SRCS}}
 
-INCLUDES		=	${addprefix ${DIR_INCS}, ${HEADERS}}
+INCLUDES		=	${addprefix ${DIR_INCS}, ${LIST_INCS}}
 
 # COLOR
 
@@ -50,13 +54,12 @@ DEFAULT 		=	\033[0m
 
 # RULES
 
-${DIR_OBJS}%.o 	:	%.c Makefile
+${DIR_OBJS}%.o 	:	%.cpp Makefile
 				@mkdir -p $(shell dirname $@)
 				@${PRINT} "${YELLOW}${SUPPR}Creating ${NAME}'s objects : $@${DEFAULT}"
-				@${CC} ${FLAGS} ${STD} -c $< -o $@ 
-				@${PRINT} "${GREEN}${SUPPR}Creating ${NAME}'s objects : DONE${DEFAULT}"
+				@${CC} ${FLAGS} ${STD} -I ${DIR_INCS} -c $< -o $@ 
 
-${NAME}			:	${OBJS}
+${NAME}			:	${OBJS} ${INCLUDES}
 				@${PRINT} "${GREEN}${SUPPR}Creating ${NAME}'s objects : DONE${DEFAULT}"
 				@${PRINT} "\n${YELLOW}Compiling ${NAME}...${DEFAULT}"
 				@${CC} ${OBJS} -o ${NAME}
@@ -78,3 +81,4 @@ ${DIR_OBJS}		:
 				mkdir -p ${DIR_OBJS}
 
 .PHONY		: all clean fclean re
+

@@ -1,5 +1,7 @@
+*.o
 */zombie
 brain
+Brain
 horde
 weapon
 *.replace

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
+/*   By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:44:59 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/10 13:17:37 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/09/06 10:15:57 by tgiraudo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../HumanA.hpp"
+#include "HumanA.hpp"
 
 HumanA::HumanA( std::string name, Weapon &weapon) : _weapon(weapon) {
 	std::cout << "Constructor called" << std::endl;

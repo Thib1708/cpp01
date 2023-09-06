@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
+/*   By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 13:24:20 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/10 14:27:34 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/09/06 10:46:59 by tgiraudo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,26 @@ int main (int argc, char **argv)
 		std::cout << "Usage: <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
-	std::fstream infile;
-	std::fstream outfile;
+	std::ifstream infile;
+	std::ofstream outfile;
 	
 	std::string line;
 	std::string file = argv[1];
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 	std::string::size_type pos = 0;
-	infile.open(file, std::ios::in);
-	outfile.open(file.append(".replace"), std::ios::out);
-	
+	infile.open(argv[1], std::ios::in);
+	if (infile.fail())
+	{
+		std::cout << "[ERROR] : " << file << " can't be open" << std::endl;
+		return (1);
+	}
+	outfile.open(file.append(".replace").c_str());
+	if (outfile.fail())
+	{
+		std::cout << "[ERROR] : " << file << " can't be open" << std::endl;
+		return (1);
+	}
 	while (!infile.eof())
 	{
 		getline(infile, line);

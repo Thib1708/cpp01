@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thibaultgiraudon <thibaultgiraudon@stud    +#+  +:+       +#+        */
+/*   By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:40:26 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/05/10 13:15:34 by thibaultgir      ###   ########.fr       */
+/*   Updated: 2023/09/06 10:16:08 by tgiraudo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../Weapon.hpp"
+#include "Weapon.hpp"
 
 Weapon::Weapon( std::string type ) {
 	std::cout << "Constructor called" << std::endl;
