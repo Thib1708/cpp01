@@ -6,7 +6,7 @@
 #    By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/09/06 10:19:30 by tgiraudo         ###   ########.fr        #
+#    Updated: 2023/09/06 13:05:47 by tgiraudo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,10 @@ LIST_SRCS		=	main.cpp 	\
 					HumanA.cpp 	\
 					HumanB.cpp 	\
 					Weapon.cpp	\
+
+LIST_INCS		=	HumanA.hpp	\
+					HumanB.hpp	\
+					Weapon.hpp
 # DIRECTORY
 DIR_OBJS		=	.objs/
 
