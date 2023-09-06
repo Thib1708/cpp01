@@ -6,7 +6,7 @@
 #    By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 11:12:25 by tgiraudo          #+#    #+#              #
-#    Updated: 2023/09/06 10:48:44 by tgiraudo         ###   ########.fr        #
+#    Updated: 2023/09/06 13:25:46 by tgiraudo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ NAME			=	harl
 
 LIST_SRCS		=	main.cpp		\
 					Harl.cpp
+
+LIST_INCS		=	Harl.hpp
 
 # DIRECTORY
 DIR_OBJS		=	.objs/

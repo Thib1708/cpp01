@@ -6,7 +6,7 @@
 /*   By: tgiraudo <tgiraudo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 13:24:20 by thibaultgir       #+#    #+#             */
-/*   Updated: 2023/09/06 10:46:59 by tgiraudo         ###   ########.fr       */
+/*   Updated: 2023/09/06 14:05:55 by tgiraudo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ int main (int argc, char **argv)
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 	std::string::size_type pos = 0;
+	if (s1.length() == 0)
+	{
+		std::cout << "[ERROR] : s1 can't be empty" << std::endl;
+		return (1);
+	}
 	infile.open(argv[1], std::ios::in);
 	if (infile.fail())
 	{
@@ -40,6 +45,7 @@ int main (int argc, char **argv)
 	if (outfile.fail())
 	{
 		std::cout << "[ERROR] : " << file << " can't be open" << std::endl;
+		infile.close();
 		return (1);
 	}
 	while (!infile.eof())
